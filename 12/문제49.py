@@ -13,7 +13,7 @@ def solution(k, dungeons):
         if current_k >= required_fatigue:
           visited[i] = True
           backtrack(current_k - consumed_fatigue, cleared_cnt + 1, visited)
-          # visited[i] = False
+          visited[i] = False
   
   visited = [False] * len(dungeons)
   backtrack(k, 0, visited)
